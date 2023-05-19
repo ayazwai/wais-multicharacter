@@ -3,7 +3,7 @@
 - #### Linkedin: [Ayaz Ekrem](https://www.linkedin.com/in/ayaz-ekrem-770305212/)
 - #### Instagram: [Ayaz Ekrem](https://www.instagram.com/ayaz.ekremm/)
 - #### Discord Server: [Wais Development](https://discord.com/invite/YanMPNg8Zn)
-- ### Sold exclusively at [0resmon](0resmon.tebex.io) tebex or Wais Development Discord.
+- ### Sold exclusively at [0resmon](0resmon.tebex.io) tebex or [Wais Development](https://discord.com/invite/YanMPNg8Zn) Discord.
 
 # *What is Config.TransferData?*
 Transfer data variable is a variable to transfer the old player data to the new player if you bought the script for the first time. When you get this variable for the first time, run the script after making it `true` for 1 time. The script will leave you a message when the transfer of player data is finished.
