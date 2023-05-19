@@ -77,7 +77,7 @@ url: String, Image url
 ### For ESX:
 ```
 Only use trigger for server
-TriggerEvent('wais:setCidPicture', source, charid, url)
+TriggerEvent('wais:setCharPicture', source, charid, url)
 source: Number, Player source
 charid: Number, Player character id like char"1":xxxx we need char number
 url: String, Image url
