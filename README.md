@@ -5,6 +5,33 @@
 - #### Discord Server: [Wais Development](https://discord.com/invite/YanMPNg8Zn)
 - ### Sold exclusively at [0resmon](0resmon.tebex.io) tebex or [Wais Development](https://discord.com/invite/YanMPNg8Zn) Discord.
 
+# WARNING FOR QB!
+There is one step that our customers using qb-core need to do. This is an important situation.
+
+- Open the `qb-core > server > player.lua` file.
+- Find the `QBCore.Player.CheckPlayerData` function.
+- Go to the last line of this function. In the last line of this function you will see the following function. `QBCore.Player.CreatePlayer(PlayerData)`
+- If this function is redirected with return, go above it, if there is no return, go below it and paste the following code here. `TriggerEvent('wais:sendNewCharacterData', source, PlayerData.cid, PlayerData.citizenid)`
+
+Like this:
+
+![alt text](https://media.discordapp.net/attachments/1035485961217384488/1109049664029855784/image.png?width=457&height=73)
+
+*When you want to delete a player, do not delete it manually from the players list. You can delete all the player's data from the sql tables using this command /closeslot license license:xxxx slotid. Otherwise, if you delete it manually, some bugs and problems may arise.*
+
+# WARNING FOR ESX!
+To use Wais-multicharacter you need to follow these steps.
+
+- Open es_extended -> config.lua
+- Here you have to replace esx_multicharacter or other script name in the multicharacter section with wais-multicharacter.
+- If the identifiers in the users table do not start with char, you should edit them to start with char. Caution Do this if you do not use multikaracters and never have!
+For example:
+
+```
+an identifier of the form b350xswkrd9324ssfbawd 
+You should change it to char1:b350xswkrd9324ssfbawd. 
+```
+
 # *What is Config.TransferData?*
 Transfer data variable is a variable to transfer the old player data to the new player if you bought the script for the first time. When you get this variable for the first time, run the script after making it `true` for 1 time. The script will leave you a message when the transfer of player data is finished.
 
@@ -81,31 +108,4 @@ TriggerEvent('wais:setCharPicture', source, charid, url)
 source: Number, Player source
 charid: Number, Player character id like char"1":xxxx we need char number
 url: String, Image url
-```
-
-# WARNING FOR QB!
-There is one step that our customers using qb-core need to do. This is an important situation.
-
-- Open the `qb-core > server > player.lua` file.
-- Find the `QBCore.Player.CheckPlayerData` function.
-- Go to the last line of this function. In the last line of this function you will see the following function. `QBCore.Player.CreatePlayer(PlayerData)`
-- If this function is redirected with return, go above it, if there is no return, go below it and paste the following code here. `TriggerEvent('wais:sendNewCharacterData', source, PlayerData.cid, PlayerData.citizenid)`
-
-Like this:
-
-![alt text](https://media.discordapp.net/attachments/1035485961217384488/1109049664029855784/image.png?width=457&height=73)
-
-*When you want to delete a player, do not delete it manually from the players list. You can delete all the player's data from the sql tables using this command /closeslot license license:xxxx slotid. Otherwise, if you delete it manually, some bugs and problems may arise.*
-
-# WARNING FOR ESX!
-To use Wais-multicharacter you need to follow these steps.
-
-- Open es_extended -> config.lua
-- Here you have to replace esx_multicharacter or other script name in the multicharacter section with wais-multicharacter.
-- If the identifiers in the users table do not start with char, you should edit them to start with char. Caution Do this if you do not use multikaracters and never have!
-For example:
-
-```
-an identifier of the form b350xswkrd9324ssfbawd 
-You should change it to char1:b350xswkrd9324ssfbawd. 
 ```
