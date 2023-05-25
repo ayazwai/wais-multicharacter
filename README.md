@@ -96,3 +96,16 @@ Like this:
 ![alt text](https://media.discordapp.net/attachments/1035485961217384488/1109049664029855784/image.png?width=457&height=73)
 
 *When you want to delete a player, do not delete it manually from the players list. You can delete all the player's data from the sql tables using this command /closeslot license license:xxxx slotid. Otherwise, if you delete it manually, some bugs and problems may arise.*
+
+# WARNING FOR ESX!
+To use Wais-multicharacter you need to follow these steps.
+
+- Open es_extended -> config.lua
+- Here you have to replace esx_multicharacter or other script name in the multicharacter section with wais-multicharacter.
+- If the identifiers in the users table do not start with char, you should edit them to start with char. Caution Do this if you do not use multikaracters and never have!
+For example:
+
+```
+an identifier of the form b350xswkrd9324ssfbawd 
+You should change it to char1:b350xswkrd9324ssfbawd. 
+```
