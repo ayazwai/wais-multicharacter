@@ -35,6 +35,80 @@ For example:
 an identifier of the form b350xswkrd9324ssfbawd 
 You should change it to char1:b350xswkrd9324ssfbawd. 
 ```
+# APPERANCE'S INTEGRATION
+
+- - Find the following functions and organize them according to your own apperance name:
+```
+function Config.SetPlayerCloth(skinData, ped) -- Client side function
+    exports['appearance name']:setPedAppearance(ped, skinData)
+end
+
+function Config.CharacterSelected(citizenid) -- Client side function (It is triggered when the character is selected and logged into the server.)
+    exports['fivem-appearance']:setPedAppearance(PlayerPedId(), json.decode(skinVeriables.skin))
+end
+
+FOR QB 
+
+function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
+    local model = data.sex == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
+    SetEntityCoords(PlayerPedId(), Config.DefaultPedSpawn)
+
+    TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
+    TriggerEvent('QBCore:Client:OnPlayerLoaded')
+
+    TriggerServerEvent('qb-houses:server:SetInsideMeta', 0, false)
+    TriggerServerEvent('qb-apartments:server:SetInsideMeta', 0, 0, false)
+
+    SetEntityVisible(PlayerPedId(), true)
+
+
+    -- TriggerEvent('qb-clothes:client:CreateFirstCharacter')
+    local config = {
+        ped = true,
+        headBlend = true,
+        faceFeatures = true,
+        headOverlays = true,
+        components = true,
+        props = true,
+        allowExit = true,
+        tattoos = true
+    }
+
+    exports['fivem-appearance']:setPlayerModel(model)
+    exports['fivem-appearance']:startPlayerCustomization(function(appearance)
+        if appearance then
+            TriggerServerEvent('fivem-appearance:server:saveAppearance', appearance)
+        end
+    end, config)
+end
+
+FOR ESX
+
+function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
+    local model = data.sex == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
+    SetEntityCoords(PlayerPedId(), Config.NewChracterDefaultSpawn.x, Config.NewChracterDefaultSpawn.y, Config.NewChracterDefaultSpawn.z)
+    SetEntityVisible(PlayerPedId(), true)
+
+    local config = {
+        ped = true,
+        headBlend = true,
+        faceFeatures = true,
+        headOverlays = true,
+        components = true,
+        props = true,
+        allowExit = true,
+        tattoos = true
+    }
+
+    exports['fivem-appearance']:setPlayerModel(model)
+    exports['fivem-appearance']:startPlayerCustomization(function(appearance)
+        if appearance then
+            TriggerServerEvent('fivem-appearance:server:saveAppearance', appearance)
+        end
+    end, config)
+end
+```
+---
 
 # *What is Config.TransferData?*
 Transfer data variable is a variable to transfer the old player data to the new player if you bought the script for the first time. When you get this variable for the first time, run the script after making it `true` for 1 time. The script will leave you a message when the transfer of player data is finished.
