@@ -37,17 +37,19 @@ You should change it to char1:b350xswkrd9324ssfbawd.
 ```
 # APPERANCE'S INTEGRATION
 
-- - Find the following functions and organize them according to your own apperance name:
+- Find the following functions and organize them according to your own apperance name:
 ```
 function Config.SetPlayerCloth(skinData, ped) -- Client side function
     exports['appearance name']:setPedAppearance(ped, skinData)
 end
 
 function Config.CharacterSelected(citizenid) -- Client side function (It is triggered when the character is selected and logged into the server.)
-    exports['fivem-appearance']:setPedAppearance(PlayerPedId(), json.decode(skinVeriables.skin))
+    exports['appearance name']:setPedAppearance(PlayerPedId(), json.decode(skinVeriables.skin))
 end
+```
 
-FOR QB 
+```
+FOR QB CREATE NEW CHARACTER FUNCTION
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
     local model = data.sex == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
@@ -74,15 +76,17 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
         tattoos = true
     }
 
-    exports['fivem-appearance']:setPlayerModel(model)
-    exports['fivem-appearance']:startPlayerCustomization(function(appearance)
+    exports['appearance name']:setPlayerModel(model)
+    exports['appearance name']:startPlayerCustomization(function(appearance)
         if appearance then
             TriggerServerEvent('fivem-appearance:server:saveAppearance', appearance)
         end
     end, config)
 end
+```
 
-FOR ESX
+```
+FOR ESX CREATE NEW CHARACTER FUNCTION
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
     local model = data.sex == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
@@ -100,8 +104,8 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
         tattoos = true
     }
 
-    exports['fivem-appearance']:setPlayerModel(model)
-    exports['fivem-appearance']:startPlayerCustomization(function(appearance)
+    exports['appearance name']:setPlayerModel(model)
+    exports['appearance name']:startPlayerCustomization(function(appearance)
         if appearance then
             TriggerServerEvent('fivem-appearance:server:saveAppearance', appearance)
         end
