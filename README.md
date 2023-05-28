@@ -79,7 +79,7 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
     exports['appearance name']:setPlayerModel(model)
     exports['appearance name']:startPlayerCustomization(function(appearance)
         if appearance then
-            TriggerServerEvent('fivem-appearance:server:saveAppearance', appearance)
+            TriggerServerEvent('apperancename:server:saveAppearance', appearance)
         end
     end, config)
 end
@@ -107,7 +107,7 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
     exports['appearance name']:setPlayerModel(model)
     exports['appearance name']:startPlayerCustomization(function(appearance)
         if appearance then
-            TriggerServerEvent('fivem-appearance:server:saveAppearance', appearance)
+            TriggerServerEvent('apperancename:server:saveAppearance', appearance)
         end
     end, config)
 end
