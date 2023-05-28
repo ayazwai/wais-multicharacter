@@ -44,7 +44,7 @@ function Config.SetPlayerCloth(skinData, ped) -- Client side function
 end
 
 function Config.CharacterSelected(citizenid) -- Client side function (It is triggered when the character is selected and logged into the server.)
-    exports['appearance name']:setPedAppearance(PlayerPedId(), json.decode(skinVeriables.skin))
+    exports['appearance name']:setPlayerAppearance(json.decode(skinVeriables.skin))
 end
 ```
 
