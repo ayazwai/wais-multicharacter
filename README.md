@@ -61,8 +61,8 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
 
     SetEntityVisible(PlayerPedId(), true)
 
-
-    -- TriggerEvent('qb-clothes:client:CreateFirstCharacter')
+    exports['appearance name']:setPlayerModel(model)
+    -- if you not using illenium use this lines
     local config = {
         ped = true,
         headBlend = true,
@@ -73,13 +73,13 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
         allowExit = true,
         tattoos = true
     }
-
-    exports['appearance name']:setPlayerModel(model)
     exports['appearance name']:startPlayerCustomization(function(appearance)
         if appearance then
             TriggerServerEvent('apperancename:server:saveAppearance', appearance)
         end
     end, config)
+    -- if you using illenium use this line
+    TriggerEvent('esx_skin:openSaveableMenu', true, false)
 end
 ```
 
@@ -99,6 +99,8 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
     SetEntityCoords(PlayerPedId(), Config.NewChracterDefaultSpawn.x, Config.NewChracterDefaultSpawn.y, Config.NewChracterDefaultSpawn.z)
     SetEntityVisible(PlayerPedId(), true)
 
+    exports['appearance name']:setPlayerModel(model)
+    -- if you not using illenium use this lines
     local config = {
         ped = true,
         headBlend = true,
@@ -109,13 +111,13 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
         allowExit = true,
         tattoos = true
     }
-
-    exports['appearance name']:setPlayerModel(model)
     exports['appearance name']:startPlayerCustomization(function(appearance)
         if appearance then
             TriggerServerEvent('apperancename:server:saveAppearance', appearance)
         end
     end, config)
+    -- if you using illenium use this line
+    TriggerEvent('esx_skin:openSaveableMenu', true, false)
 end
 ```
 ---
