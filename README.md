@@ -50,7 +50,7 @@ function Config.CharacterSelected(citizenid) -- Client side function (It is trig
 end
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
-    local model = data.sex == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
+    local model = data.gender == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
     SetEntityCoords(PlayerPedId(), Config.DefaultPedSpawn)
 
     TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
