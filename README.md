@@ -118,7 +118,7 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
         end
     end, config)
     -- if you using illenium use this line
-    TriggerEvent('esx_skin:openSaveableMenu', true, false)
+    TriggerEvent('esx_skin:openSaveableMenu')
 end
 ```
 ---
