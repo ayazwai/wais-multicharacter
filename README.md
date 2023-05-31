@@ -124,7 +124,7 @@ end
 ---
 
 # *What is Config.TransferData?*
-Transfer data variable is a variable to transfer the old player data to the new player if you bought the script for the first time. When you get this variable for the first time, run the script after making it `true` for 1 time. The script will leave you a message when the transfer of player data is finished.
+Transfer data variable is a variable used to transfer the old player data to the new player if you have the script for the first time. When you get this variable for the first time, run the script after making it `true` 1 time. The script will leave you a message when the player data transfer is finished. When you see this message, change the TransferData variable to `false` and restart the server
 
 # *What is Config.PedCoords?*
 The position of the character that appears on the screen when the player enters the server. 
