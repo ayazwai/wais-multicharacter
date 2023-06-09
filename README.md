@@ -79,7 +79,7 @@ function Config.CreateNewCharacter(data) -- Client side function ( Data is playe
         end
     end, config)
     -- if you using illenium use this line
-    TriggerEvent('qb-clothes:client:CreateFirstCharacter', true, false)
+    TriggerEvent('qb-clothes:client:CreateFirstCharacter')
     
 end
 ```
