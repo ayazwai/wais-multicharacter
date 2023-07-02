@@ -46,7 +46,9 @@ function Config.SetPlayerCloth(skinData, ped) -- Client side function
 end
 
 function Config.CharacterSelected(citizenid) -- Client side function (It is triggered when the character is selected and logged into the server.)
-    exports['appearance name']:setPlayerAppearance(PlayerPedId(), json.decode(skinVeriables.skin))
+    exports['appearance name']:setPlayerAppearance(json.decode(skinVeriables.skin))
+    SetEntityVisible(PlayerPedId(), true)
+    NetworkSetEntityInvisibleToNetwork(PlayerPedId(), true)
 end
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
@@ -93,6 +95,8 @@ end
 
 function Config.CharacterSelected(identifier, charId) -- Client side function (It is triggered when the character is selected and logged into the server.)
     exports['appearance name']:setPlayerAppearance(json.decode(skinVeriables.skin))
+    SetEntityVisible(PlayerPedId(), true)
+    NetworkSetEntityInvisibleToNetwork(PlayerPedId(), true)
 end
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
