@@ -47,6 +47,9 @@ end
 
 function Config.CharacterSelected(citizenid) -- Client side function (It is triggered when the character is selected and logged into the server.)
     exports['appearance name']:setPlayerAppearance(json.decode(skinVeriables.skin))
+
+    -- If you are invisible when you select your character, paste these codes.
+    -- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
     SetEntityVisible(PlayerPedId(), true)
     NetworkSetEntityInvisibleToNetwork(PlayerPedId(), true)
 end
@@ -95,6 +98,9 @@ end
 
 function Config.CharacterSelected(identifier, charId) -- Client side function (It is triggered when the character is selected and logged into the server.)
     exports['appearance name']:setPlayerAppearance(json.decode(skinVeriables.skin))
+
+    -- If you are invisible when you select your character, paste these codes.
+    -- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
     SetEntityVisible(PlayerPedId(), true)
     NetworkSetEntityInvisibleToNetwork(PlayerPedId(), true)
 end
