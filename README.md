@@ -51,7 +51,7 @@ function Config.CharacterSelected(citizenid) -- Client side function (It is trig
     -- If you are invisible when you select your character, paste these codes.
     -- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
     SetEntityVisible(PlayerPedId(), true)
-    NetworkSetEntityInvisibleToNetwork(PlayerPedId(), true)
+    NetworkSetEntityInvisibleToNetwork(PlayerPedId(), false)
 end
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
@@ -102,7 +102,7 @@ function Config.CharacterSelected(identifier, charId) -- Client side function (I
     -- If you are invisible when you select your character, paste these codes.
     -- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
     SetEntityVisible(PlayerPedId(), true)
-    NetworkSetEntityInvisibleToNetwork(PlayerPedId(), true)
+    NetworkSetEntityInvisibleToNetwork(PlayerPedId(), false)
 end
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
