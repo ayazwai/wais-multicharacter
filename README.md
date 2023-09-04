@@ -55,37 +55,19 @@ function Config.CharacterSelected(citizenid) -- Client side function (It is trig
 end
 
 function Config.CreateNewCharacter(data) -- Client side function ( Data is player register infos )
-    local model = data.gender == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
-    SetEntityCoords(PlayerPedId(), Config.DefaultPedSpawn)
+    if not Apartments.Starting then
+        local model = data.gender == 0 and `mp_m_freemode_01` or `mp_f_freemode_01`
+        SetEntityCoords(PlayerPedId(), Config.DefaultPedSpawn)
 
-    TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
-    TriggerEvent('QBCore:Client:OnPlayerLoaded')
+        TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
+        TriggerEvent('QBCore:Client:OnPlayerLoaded')
 
-    TriggerServerEvent('qb-houses:server:SetInsideMeta', 0, false)
-    TriggerServerEvent('qb-apartments:server:SetInsideMeta', 0, 0, false)
+        TriggerServerEvent('qb-houses:server:SetInsideMeta', 0, false)
+        TriggerServerEvent('qb-apartments:server:SetInsideMeta', 0, 0, false)
 
-    SetEntityVisible(PlayerPedId(), true)
-
-    exports['appearance name']:setPlayerModel(model)
-    -- if you not using illenium use this lines
-    local config = {
-        ped = true,
-        headBlend = true,
-        faceFeatures = true,
-        headOverlays = true,
-        components = true,
-        props = true,
-        allowExit = true,
-        tattoos = true
-    }
-    exports['appearance name']:startPlayerCustomization(function(appearance)
-        if appearance then
-            TriggerServerEvent('apperancename:server:saveAppearance', appearance)
-        end
-    end, config)
-    -- if you using illenium use this line
-    TriggerEvent('qb-clothes:client:CreateFirstCharacter')
-    
+        SetEntityVisible(PlayerPedId(), true)
+        TriggerEvent('qb-clothes:client:CreateFirstCharacter')
+    end
 end
 ```
 
