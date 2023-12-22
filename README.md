@@ -192,3 +192,20 @@ source: Number, Player source
 charid: Number, Player character id like char"1":xxxx we need char number
 url: String, Image url
 ```
+
+# *Light flash*
+
+As soon as Multichracter is active, you need to turn off the `SYNC` option of your weather script. 
+When the character is selected, that is, when NUIClosed, you need to open `SYNC` again in this function.
+
+Example:
+
+```
+function Config.NUIActived() -- Client side function
+    TriggerEvent('qb-weathersync:client:DisableSync')
+end
+
+function Config.NUIClosed() -- Client side function
+    TriggerEvent('qb-weathersync:client:EnableSync')
+end
+```
