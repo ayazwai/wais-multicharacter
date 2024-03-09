@@ -4,6 +4,12 @@
 - #### Instagram: [Ayaz Ekrem](https://www.instagram.com/ayaz.ekremm/)
 - ### Sold exclusively at [0resmon](0resmon.tebex.io) tebex.
 
+# IMPORTANT! INSTALL TIPS
+- Do not change the name of the script
+- Keep the script in the resources folder
+- Do not keep the script in folders like [character, core]
+- start manually after the framework you are using in server.cfg
+
 # WARNING FOR QB!
 There is one step that our customers using qb-core need to do. This is an important situation.
 
