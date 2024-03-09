@@ -1,4 +1,4 @@
-# WAIS-HUDV5 
+# WAIS-MULTICHRACTER 
 - #### Author: Ayazwai#3900
 - #### Linkedin: [Ayaz Ekrem](https://www.linkedin.com/in/ayaz-ekrem-770305212/)
 - #### Instagram: [Ayaz Ekrem](https://www.instagram.com/ayaz.ekremm/)
