@@ -20,11 +20,11 @@ There is one step that our customers using qb-core need to do. This is an import
 
 Old QB Like this:
 
-![alt text](https://media.discordapp.net/attachments/1035485961217384488/1109049664029855784/image.png?ex=65f4147d&is=65e19f7d&hm=165d877eb3b5282df26aef517d1277035995902f987b282e8845536428eac45f&=&format=webp&quality=lossless&width=732&height=117    )
+![alt text](https://i.imgur.com/p0sgnCV.png)
 
 New QB Like this
 
-![alt text](https://media.discordapp.net/attachments/1035485961217384488/1111405469848842402/image.png?ex=65f36c00&is=65e0f700&hm=8583f2984a3b95e09135f46ce56aeb795e6571e0a2d9cce93a1a3f2e4fcba634&=&format=webp&quality=lossless&width=1267&height=122)
+![alt text](https://i.imgur.com/4FIu7HR.png)
 
 *When you want to delete a player, do not delete it manually from the players list. You can delete all the player's data from the sql tables using this command /closeslot license license:xxxx slotid. Otherwise, if you delete it manually, some bugs and problems may arise.*
 
